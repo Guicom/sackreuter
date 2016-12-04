@@ -1,0 +1,5 @@
+---
+# Global variables, shared beetwen Vagrant & Drush
+project:
+    code:   sac
+    name:   sackreuter

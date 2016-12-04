@@ -1,0 +1,61 @@
+version: '2'
+services:
+  # web with xdebug - actency images
+  web:
+    # actency/docker-apache-php available tags: latest, 7.0, 5.6, 5.5, 5.4, 5.3
+    image: actency/docker-apache-php:5.6
+    # actency/docker-nginx-php available tags: latest, 5.6, 5.5, 5.4
+    # image: actency/docker-nginx-php:5.6
+    ports:
+      - "80:80"
+      - "9000:9000"
+    environment:
+      - SERVERNAME=telerama.local
+      - SERVERALIAS= *.telerama.local
+      - DOCUMENTROOT=htdocs
+    volumes:
+      - /home/docker/projets/telerama/:/var/www/html/
+      - /home/docker/.ssh/:/var/www/.ssh/
+    links:
+      - database:mysql
+      - mailhog
+      - memcache
+      - solr
+    tty: true
+    # # start your graylog container using official image with "docker run -it -p 8000:9000 -p 12201:12201 -p 12205:12205 graylog2/allinone",
+    # # then you can uncomment the section below to forward container's logs in graylog.
+    # logging:
+    #   driver: gelf
+    #   options:
+    #     # change the IP by your graylog container's IP address
+    #     gelf-address: "udp://graylog_container_ip:12201"
+
+  # database container - actency images
+  database:
+    # actency/docker-mysql available tags: latest, 5.7, 5.6, 5.5
+    image: actency/docker-mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysqlroot
+      - MYSQL_DATABASE=telerama
+      - MYSQL_USER=telerama
+      - MYSQL_PASSWORD=mysqlpwd
+
+  # phpmyadmin container - actency images
+  phpmyadmin:
+    image: actency/docker-phpmyadmin
+    ports:
+      - "8010:80"
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysqlroot
+      - UPLOAD_SIZE=1G
+    links:
+      - database:mysql
+
+  # mailhog container - official images
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
