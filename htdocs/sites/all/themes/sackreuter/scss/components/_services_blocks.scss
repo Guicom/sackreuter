@@ -1,0 +1,46 @@
+#block-views-home-services-block {
+  background: $grey-dark;
+  border-bottom: 2px solid $red;
+
+  .view-header-left {
+    width: 60%;
+
+    .view-header-left-wrapper {
+      width: 80%;
+      margin: 0 auto;
+      h2 {
+        color: $white;
+        line-height: 80px;
+      }
+
+      p {
+        font-size: 20px;
+        color: $white;
+        margin-bottom: 30px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .view-content-right {
+    width: 40%;
+
+    .home-services-bg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 175px;
+
+      h2 {
+        margin: 0;
+        font-size: 50px;
+        color: $white;
+        font-weight: 300;
+        line-height: 175px;
+        padding-left: 50px;
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

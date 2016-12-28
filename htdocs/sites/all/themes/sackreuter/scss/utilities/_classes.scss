@@ -1,0 +1,49 @@
+.row-eq-height {
+  display: flex;
+  &.center {
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@mixin row-eq-height {
+  display: flex;
+}
+
+@mixin row-eq-height-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.no-float {
+  float: none;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.big {
+  font-size: 80px;
+  font-weight: 200;
+}
+
+.title-underline-right {
+  position: relative;
+  margin-bottom: 30px;
+  &:after {
+    content: '';
+    width: 100px;
+    height: 2px;
+    background: $white;
+    position: absolute;
+    left: 0;
+    margin-top: 15px;
+    display: block;
+  }
+}

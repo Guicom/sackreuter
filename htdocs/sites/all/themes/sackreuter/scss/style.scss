@@ -1,0 +1,16 @@
+// Default variables.
+@import 'utilities/_variables';
+
+// Bootstrap Framework.
+@import '../bootstrap/assets/stylesheets/bootstrap';
+
+// Base-theme overrides.
+@import 'utilities/_overrides';
+
+@import "utilities/classes";
+@import "utilities/mixins";
+@import "pages/global";
+@import "components/header";
+@import "components/services_blocks";
+@import "components/offre_block";
+@import "components/equipe_block";

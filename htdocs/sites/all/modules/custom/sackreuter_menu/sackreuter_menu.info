@@ -1,0 +1,4 @@
+name = sackreuter_menu
+description = Custom module to manage anchor & normal link
+core = 7.x
+package = Dalibert

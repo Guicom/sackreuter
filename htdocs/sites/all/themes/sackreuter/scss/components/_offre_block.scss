@@ -1,0 +1,85 @@
+.region-vente {
+  background: $grey-dark;
+  @include row-eq-height;
+  align-items: center;
+
+  #block-block-1 {
+    width: 40%;
+    background: $grey-darker;
+    padding: 0 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .block-content-wrapper {
+      flex-grow: 2;
+      .block-title {
+        font-size: 50px;
+        color: $white;
+        font-weight: 300;
+      }
+
+      p {
+        font-size: 20px;
+        color: $white;
+        margin-bottom: 30px;
+        font-weight: 300;
+
+        a {
+          color: $red;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .diago-wrapper {
+      height: auto;
+      width: 35%;
+      background: $grey-dark;
+      overflow: hidden;
+      .diago {
+        background: $grey-darker;
+        transform: rotate(-55deg);
+        width: 500px;
+        height: 300px;
+        position: relative;
+        left: -255px;
+        top: -37px;
+      }
+    }
+  }
+
+  #block-views-offre-home-block {
+    width: 60%;
+
+    .view-content {
+      @include row-eq-height-center;
+
+      .home-services-bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 241px;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+
+        .field-name-title {
+          h2 {
+            font-size: 50px;
+            color: $white;
+            font-weight: 200;
+          }
+        }
+
+        .field-name-node-link {
+          a {
+            font-size: 20px;
+            color: $red;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

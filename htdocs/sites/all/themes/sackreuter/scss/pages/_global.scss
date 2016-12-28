@@ -1,0 +1,21 @@
+body {
+  font-family: $main-font;
+}
+
+a {
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.admin-menu {
+  .main-container {
+    margin-top: 128px;
+  }
+}
+
+.main-container {
+  margin-top: 100px;
+}

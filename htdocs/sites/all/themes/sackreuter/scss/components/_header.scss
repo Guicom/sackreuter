@@ -1,0 +1,58 @@
+header.navbar-default {
+  position: fixed;
+  width: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: $white;
+  border: none;
+  border-radius: 0;
+
+  .navbar-header {
+    .logo {
+      margin-left: 15px;
+      img {
+        width: 205px;
+        height: auto;
+      }
+    }
+  }
+
+  #navbar-collapse {
+    #block-system-main-menu {
+      .menu {
+        > li {
+          display: inline-block;
+          a {
+            font-size: 22px;
+            color: $grey-dark;
+            font-weight: 300;
+            border-bottom: 2px solid $white;
+            @include transition-s;
+            &:hover {
+              background: none;
+              border-bottom: 2px solid $red;
+              @include transition-s
+            }
+            &:focus {
+              background: none;
+              outline: none
+            }
+          }
+          &.active {
+            a {
+              border-bottom: 2px solid $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-menu {
+  header.navbar-default {
+    top: 28px;
+  }
+}
