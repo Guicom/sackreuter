@@ -3,7 +3,6 @@
 // Include Gulp & some usefull plugin
 var gulp        = require("gulp");
 var sass        = require("gulp-sass");
-var filter      = require('gulp-filter');
 var sourcemaps = require('gulp-sourcemaps');
 var shell = require('gulp-shell');
 
