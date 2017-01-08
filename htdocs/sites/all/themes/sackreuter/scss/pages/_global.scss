@@ -19,3 +19,40 @@ a {
 .main-container {
   margin-top: 100px;
 }
+
+.row {
+  margin: 0;
+}
+
+label {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.form-control,
+input,
+select,
+textarea{
+  border-radius: 0;
+  border: none;
+  background: $grey-light;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-actions {
+  text-align: right;
+
+  #edit-submit {
+    background: $red;
+    border-radius: 0;
+    border: none;
+    font-size: 18px;
+  }
+
+  #edit-preview {
+    display: none;
+  }
+}

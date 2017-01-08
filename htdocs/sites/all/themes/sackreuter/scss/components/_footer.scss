@@ -1,0 +1,22 @@
+.footer {
+  border: none;
+  background: $grey-dark;
+  padding: 50px 0;
+  margin: 0;
+
+  #block-block-6 {
+    text-align: center;
+    a,
+    p {
+      color: $white;
+      font-size: 18px;
+    }
+    h5 {
+      color: $white;
+      font-size: 14px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}

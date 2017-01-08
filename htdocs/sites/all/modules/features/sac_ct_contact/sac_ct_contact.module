@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sac_ct_contact feature.
+ */
+
+include_once 'sac_ct_contact.features.inc';

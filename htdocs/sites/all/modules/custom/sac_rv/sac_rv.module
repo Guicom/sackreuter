@@ -1,0 +1,137 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function sac_rv_block_info() {
+  $blocks = array();
+  $blocks['rendez_vous'] = array(
+    'info' => t('Rendez-vous block'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function sac_rv_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'rendez_vous' :
+      $block['content'] = sac_rv_rendez_vous_content();
+      break;
+  }
+
+  return $block;
+}
+
+function sac_rv_rendez_vous_content() {
+  module_load_include('inc', 'node', 'node.pages');
+  $form = node_add('rendez_vous');
+  return drupal_render($form);
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function sac_rv_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'rendez_vous_node_form':
+      $form['#attached']['js'][] = drupal_get_path('module', 'sac_rv') . '/js/sac_rv.js';
+      $form['#attached']['libraries_load'][] = array('bootstrap-datetimepicker');
+
+      $form['field_rv_date']['#suffix'] = '<div id="rv-date"></div>';
+
+      $form['field_title_block'] = [
+        '#markup' => '<h2>' . t('Prendre rendez-vous') . '</h2>',
+      ];
+  }
+}
+
+
+/**
+ * Implements hook_libraries_info().
+ */
+function sac_rv_libraries_info() {
+  $libraries = array();
+
+  if (($library_path = libraries_get_path('bootstrap-datetimepicker'))) {
+    $libraries['bootstrap-datetimepicker'] = array(
+      'library path' => $library_path,
+      'name' => 'Bootstrap Date & Time picker',
+      'vendor url' => 'https://github.com/Eonasdan/bootstrap-datetimepicker',
+      'download url' => 'https://github.com/Eonasdan/bootstrap-datetimepicker/releases',
+      'version callback' => 'sac_rv_get_library_version',
+      'version arguments' => array(),
+      'files' => array(
+        'js' => array(
+          'build/js/bootstrap-datetimepicker.min.js',
+        ),
+        'css' => array(
+          'build/css/bootstrap-datetimepicker.min.css',
+        ),
+      ),
+      'variants' => array(
+        'none' => array(
+          'files' => array(
+            'js' => array(
+              'src/js/bootstrap-datetimepicker.js',
+            ),
+            'css' => array(
+              'build/css/bootstrap-datetimepicker.css',
+            ),
+          ),
+        ),
+      ),
+      'dependencies' => array(
+        'moment',
+      ),
+    );
+  }
+
+  return $libraries;
+}
+
+/**
+ * Library info "version callback".
+ *
+ * @param array $info
+ *   Library info.
+ *
+ * @return string|false
+ *   Version number.
+ */
+function sac_rv_get_library_version(array $info) {
+  return sac_rv_get_package_version($info['library path']);
+}
+
+/**
+ * Get the version number from package JSON.
+ *
+ * @param string $library_path
+ *   Directory.
+ *
+ * @return string|false
+ *   Version number.
+ */
+function sac_rv_get_package_version($library_path) {
+  static $versions = array();
+
+  if (!$library_path) {
+    return FALSE;
+  }
+
+  if (!isset($version[$library_path])) {
+    $versions[$library_path] = FALSE;
+    if (is_readable("$library_path/package.json")) {
+      $package = drupal_json_decode(file_get_contents("$library_path/package.json"));
+      if ($package && !empty($package['version'])) {
+        $versions[$library_path] = $package['version'];
+      }
+    }
+  }
+
+  return $versions[$library_path];
+}

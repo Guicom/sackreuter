@@ -9,8 +9,16 @@
 
 @import "utilities/classes";
 @import "utilities/mixins";
-@import "pages/global";
 @import "components/header";
 @import "components/services_blocks";
 @import "components/offre_block";
 @import "components/equipe_block";
+@import "components/rendez_vous_form";
+@import "components/select";
+@import "components/block_contact";
+@import "components/footer";
+@import "components/breadcrumb";
+@import "components/blog_list";
+@import "pages/global";
+@import "pages/services";
+@import "pages/content";

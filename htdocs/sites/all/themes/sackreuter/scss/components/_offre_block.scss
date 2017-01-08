@@ -1,9 +1,11 @@
-.region-vente {
+.region-vente,
+.region-blog {
   background: $grey-dark;
   @include row-eq-height;
   align-items: center;
 
-  #block-block-1 {
+  #ventes,
+  #blog-texte {
     width: 40%;
     background: $grey-darker;
     padding: 0 0 0 15px;
@@ -39,7 +41,7 @@
       overflow: hidden;
       .diago {
         background: $grey-darker;
-        transform: rotate(-55deg);
+        transform: rotate(-60deg);
         width: 500px;
         height: 300px;
         position: relative;
@@ -49,7 +51,8 @@
     }
   }
 
-  #block-views-offre-home-block {
+  #block-views-offre-home-block,
+  #blog {
     width: 60%;
 
     .view-content {

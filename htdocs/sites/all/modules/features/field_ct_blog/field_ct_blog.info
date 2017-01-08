@@ -1,0 +1,15 @@
+name = field_ct_blog
+core = 7.x
+package = SAC : Content Type
+dependencies[] = features
+dependencies[] = image
+dependencies[] = node
+dependencies[] = simplecrop
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-blog-body
+features[field_instance][] = node-blog-field_offre_image_accueil
+features[node][] = blog
+features_exclude[field_base][body] = body
+features_exclude[field_base][field_offre_image_accueil] = field_offre_image_accueil
+project path = sites/all/modules/features

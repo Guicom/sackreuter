@@ -1,3 +1,13 @@
 @mixin transition-s {
   transition: all .3s ease;
 }
+
+@mixin border-bloc {
+  border-bottom: 2px solid $red;
+}
+
+@mixin make-container {
+  width: $screen-lg;
+  margin: 0 auto;
+  padding: 15px;
+}
