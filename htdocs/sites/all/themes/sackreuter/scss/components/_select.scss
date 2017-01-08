@@ -1,0 +1,29 @@
+form {
+  .selectboxit-container {
+    display: block;
+    width: 100%;
+    .selectboxit {
+      width: 100%;
+      border-radius: 0;
+      background: $grey-light;
+      border: none;
+      box-shadow: none;
+      height: 34px;
+      span {
+        height: 34px;
+        line-height: 34px;
+      }
+    }
+
+    .selectboxit-options {
+      border-radius: 0;
+      background: $grey-light;
+      > .selectboxit-focus {
+        > .selectboxit-option-anchor {
+          background: $white;
+          color: $grey-dark;
+        }
+      }
+    }
+  }
+}

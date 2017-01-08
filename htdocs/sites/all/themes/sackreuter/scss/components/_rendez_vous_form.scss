@@ -1,0 +1,169 @@
+#rendez-vous {
+  padding: 15px;
+  @include border-bloc;
+
+  h2 {
+    font-size: 50px;
+    font-weight: 200;
+  }
+
+  .form-item-title {
+    display: none;
+  }
+
+  label {
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  input,
+  select,
+  textarea{
+    border-radius: 0;
+    border: none;
+    background: $grey-light;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .group-date {
+    width: 48%;
+    float: left;
+
+    #rv-date {
+      .datepicker {
+        width: 80%;
+        margin: 0 auto;
+        thead {
+          tr {
+            &:first-child {
+              background: $grey-dark;
+              height: 315px;
+              th {
+                border: none;
+                border-radius: 0;
+                background: $grey-dark;
+                color: $white;
+                font-size: 30px;
+                font-weight: 200;
+                text-transform: uppercase;
+              }
+            }
+            .glyphicon {
+              color: $red;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              font-weight: 200;
+              border-radius: 0;
+              &.active {
+                background: $red;
+              }
+              &.disabled {
+                background: $grey-light;
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .field-name-field-rv-date {
+      label {
+        display: none;
+      }
+      #edit-field-rv-date-und-0-value {
+        display: none;
+      }
+    }
+
+    .field-name-field-rv-time {
+      width: 80%;
+      margin: 30px auto;
+      label {
+        font-weight: normal;
+      }
+      #edit-field-rv-time-und {
+        .form-item-field-rv-time-und {
+          display: inline-block;
+          margin-right: 15px;
+          &:first-child {
+            display: none;
+          }
+          label {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .group-coordonnees {
+    width: 48%;
+    float: right;
+
+    .form-group {
+      width: 48%;
+      &:nth-child(odd) {
+        float: left;
+      }
+      &:nth-child(even) {
+        float: right;
+      }
+      .form-group {
+        width: 100%;
+      }
+    }
+  }
+
+  .group-rendez-vous {
+    width: 48%;
+    float: right;
+  }
+
+  fieldset {
+    border: none;
+    box-shadow: none;
+    legend {
+      background: none;
+      border: none;
+      border-bottom: solid 1px $grey-dark;
+      a {
+        font-size: 25px;
+        font-weight: 200;
+      }
+    }
+  }
+
+  .form-actions {
+    text-align: right;
+
+    #edit-submit {
+      background: $red;
+      border-radius: 0;
+      border: none;
+      font-size: 18px;
+      margin-right: 15px;
+    }
+
+    #edit-preview {
+      display: none;
+    }
+  }
+
+  > form {
+    > div {
+      .tabbable {
+        clear: both;
+        display: none;
+      }
+    }
+  }
+}

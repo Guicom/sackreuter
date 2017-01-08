@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the field_ct_blog feature.
+ */
+
+include_once 'field_ct_blog.features.inc';

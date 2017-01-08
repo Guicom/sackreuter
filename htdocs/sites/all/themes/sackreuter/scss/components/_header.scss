@@ -8,6 +8,7 @@ header.navbar-default {
   background: $white;
   border: none;
   border-radius: 0;
+  box-shadow: 0px 1px 10px 0px #a5a4a4;
 
   .navbar-header {
     .logo {
@@ -43,6 +44,32 @@ header.navbar-default {
           &.active {
             a {
               border-bottom: 2px solid $red;
+            }
+            ul {
+              li {
+                a {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background: $grey-light;
+                border-bottom: none;
+                @include transition-s
+              }
+              &:focus {
+                background: none;
+                outline: none
+              }
+              &.active {
+                a {
+                  background: none;
+                  border-bottom: none;
+                }
+              }
             }
           }
         }

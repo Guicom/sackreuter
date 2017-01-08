@@ -83,7 +83,7 @@ function sackreuter_menu_link(array $variables) {
       } else {
         $class = 'leaf';
       }
-      $output = '<a href="' . $link_anchor . $class . '">' . $element['#title'] . '</a>';
+      $output = '<a href="' . $link_anchor . '" class="' . $class . '">' . $element['#title'] . '</a>';
       return '<li class="' . $class  . '">' . $output . $sub_menu . "</li>\n";
     } else {
       return sackreuter_print_normal_menu_link($variables);
@@ -136,4 +136,12 @@ function sackreuter_print_normal_menu_link($variables) {
   }
 
   return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
+}
+
+/**
+ * Implement theme_textarea
+ */
+function sackreuter_textarea($element) {
+  $element['element']['#resizable'] = false ;
+  return theme_textarea($element) ;
 }

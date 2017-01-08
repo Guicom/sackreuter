@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the sac_ds feature.
+ */
+
+include_once 'sac_ds.features.inc';

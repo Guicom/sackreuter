@@ -1,0 +1,4 @@
+name = sac_rv
+description = Custom module to manage rendez-vous nodes
+core = 7.x
+package = Sackreuter

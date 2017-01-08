@@ -1,6 +1,6 @@
-#block-views-home-services-block {
+#services {
   background: $grey-dark;
-  border-bottom: 2px solid $red;
+  @include border-bloc;
 
   .view-header-left {
     width: 60%;

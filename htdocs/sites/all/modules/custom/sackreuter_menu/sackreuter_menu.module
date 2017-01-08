@@ -27,8 +27,12 @@ function sackreuter_menu_form_alter(&$form, &$form_state, $form_id) {
 
 
 function _sackreuter_menu_form_submit($form, &$form_state) {
+  $variable_name = $form_state['values']['mlid'] . '_anchor';
+  $variable = variable_get($variable_name);
   if (!empty($form_state['values']['link_menu_anchor'])) {
-    $variable_name = $form_state['values']['mlid'] . '_anchor';
     variable_set($variable_name, $form_state['values']['link_menu_anchor']);
+  }
+  elseif (isset($variable)) {
+    variable_del($variable_name);
   }
 }

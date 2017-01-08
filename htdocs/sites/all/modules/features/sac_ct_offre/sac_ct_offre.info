@@ -1,0 +1,14 @@
+name = sac_ct_offre
+core = 7.x
+package = SAC : Content Type
+dependencies[] = features
+dependencies[] = image
+dependencies[] = node
+dependencies[] = sac_field_base
+dependencies[] = simplecrop
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-offre-body
+features[field_instance][] = node-offre-field_offre_image_accueil
+features[node][] = offre
+project path = sites/all/modules/features

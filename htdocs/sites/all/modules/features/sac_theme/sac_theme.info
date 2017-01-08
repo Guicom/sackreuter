@@ -1,0 +1,13 @@
+name = sac_theme
+core = 7.x
+package = SAC : Settings
+dependencies[] = adminimal_admin_menu
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = admin_theme
+features[variable][] = node_admin_theme
+features[variable][] = theme_default
+features[variable][] = theme_sackreuter_settings
+project path = sites/all/modules/features

@@ -31,7 +31,15 @@ regions[page_bottom]    = 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
+stylesheets[all][] = vendor/jquery-ui/jquery-ui.min.css
+stylesheets[all][] = vendor/jquery.selectBoxIt.js/src/stylesheets/jquery.selectBoxIt.css
 
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+scripts[] = 'vendor/jquery-ui/jquery-ui.min.js'
+scripts[] = 'vendor/jquery.selectBoxIt.js/src/javascripts/jquery.selectBoxIt.min.js'
+scripts[] = 'js/sackreuter.js'
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts

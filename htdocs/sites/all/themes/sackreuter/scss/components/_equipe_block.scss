@@ -1,8 +1,7 @@
-#block-block-2 {
+#equipes {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid $red;
-  margin-bottom: 50px;
+  @include border-bloc;
 
   .block-content-wrapper {
     width: 50%;

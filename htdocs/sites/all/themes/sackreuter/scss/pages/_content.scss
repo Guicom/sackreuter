@@ -1,0 +1,53 @@
+.node-type-offre,
+.node-type-page,
+.node-type-blog,
+.page-blog,
+.page-contact,
+.page-node-add-contact {
+  .page-header {
+    @include make-container;
+  }
+
+  .ds-2col-fluid,
+  .ds-1col {
+    &.node-offre,
+    &.node-page,
+    &.node-blog:not(.view-mode-listing){
+      @include make-container;
+    }
+  }
+
+  .view-blog:not(.view-display-id-block) {
+    @include make-container;
+    #views-bootstrap-grid-1 {
+      .row {
+        margin-left: -15px;
+        margin-right: -15px;
+        display: flex;
+      }
+    }
+  }
+
+  .node-contact-form {
+    @include make-container;
+  }
+}
+
+.main-container {
+  min-height: calc(100vh - 260px);
+}
+
+body {
+  font-size: 16px;
+}
+
+.field-name-body {
+  img {
+    @include img-responsive();
+  }
+  .row {
+    margin-bottom: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
