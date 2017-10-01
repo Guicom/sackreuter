@@ -45,7 +45,7 @@ function sac_rv_form_alter(&$form, &$form_state, $form_id) {
       $form['field_rv_date']['#suffix'] = '<div id="rv-date"></div>';
 
       $form['field_title_block'] = [
-        '#markup' => '<h2>' . t('Prendre rendez-vous') . '</h2>',
+        '#markup' => '<h2>' . t('Demander un rendez-vous') . '</h2>',
       ];
   }
 }
