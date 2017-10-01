@@ -3,8 +3,6 @@
 // Include Gulp & some usefull plugin
 var gulp        = require("gulp");
 var sass        = require("gulp-sass");
-var sourcemaps = require('gulp-sourcemaps');
-var shell = require('gulp-shell');
 
 // Include plugins
 // @see https://www.npmjs.com/package/gulp-load-plugins
