@@ -57,6 +57,9 @@
 
     .view-content {
       @include row-eq-height-center;
+      @include custom-breakpoint(1200px) {
+        flex-direction: column;
+      }
 
       .home-services-bg {
         background-repeat: no-repeat;
@@ -84,5 +87,11 @@
         }
       }
     }
+  }
+}
+
+.region-vente {
+  @include custom-breakpoint(1200px) {
+    align-items: inherit;
   }
 }

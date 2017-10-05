@@ -2,37 +2,52 @@
   position: relative;
   height: auto;
   overflow: hidden;
+  display: flex;
+
   #block-block-4 {
-    width: 1002px;
-    float: right;
+    //width: 1002px;
+    @include make-md-column(7);
+    padding: 0;
     border-left: solid 2px $red;
+
+    iframe {
+      max-width: 100%;
+    }
   }
 
   #block-block-5 {
-    background: $grey-dark;
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    padding: 50px 100px;
-    color: $white;
-    right: 1050px;
+    @include make-md-column(5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .block-title {
-      margin-top: 0;
-      font-size: 80px;
-      font-weight: 200;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    a {
-      font-size: 18px;
+    .block-content-wrapper {
+      background: $grey-dark;
+      padding: 50px;
       color: $white;
-      text-decoration: underline;
-      &:hover {
-        color: $red;
+      .block-title {
+        margin-top: 0;
+        font-size: 80px;
+        font-weight: 200;
+      }
+
+      @include custom-breakpoint(1500px) {
+        .col-md-6 {
+          //width: 100%;
+        }
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      a {
+        font-size: 18px;
+        color: $white;
+        text-decoration: underline;
+        &:hover {
+          color: $red;
+        }
       }
     }
   }
