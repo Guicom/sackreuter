@@ -92,7 +92,7 @@ function sac_ckeditor_ckeditor_profile_defaults() {
     \'/\',
     [\'Format\',\'Font\',\'FontSize\'],
     [\'TextColor\',\'BGColor\'],
-    [\'Maximize\',\'ShowBlocks\',\'MediaEmbed\',\'Enhanced Image\',\'WidgetTemplateMenu\',\'widgetbootstrapThreeCol\',\'widgetbootstrapTwoCol\',\'widgetbootstrapRightCol\',\'widgetbootstrapLeftCol\',\'oembed\']
+    [\'Maximize\',\'ShowBlocks\',\'MediaEmbed\',\'Enhanced Image\',\'WidgetTemplateMenu\',\'widgetbootstrapThreeCol\',\'widgetbootstrapTwoCol\',\'widgetbootstrapRightCol\',\'widgetbootstrapLeftCol\',\'oembed\',\'Checkbox\',\'Radio\']
 ]',
         'expand' => 't',
         'default' => 't',

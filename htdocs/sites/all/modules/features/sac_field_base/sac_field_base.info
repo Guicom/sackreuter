@@ -40,5 +40,6 @@ features[field_base][] = field_se_det_texte
 features[field_base][] = field_se_detail_service
 features[field_base][] = field_se_image_accueil
 features[field_base][] = field_tags
+features[field_base][] = field_type
 features_exclude[taxonomy][tags] = tags
 project path = sites/all/modules/features

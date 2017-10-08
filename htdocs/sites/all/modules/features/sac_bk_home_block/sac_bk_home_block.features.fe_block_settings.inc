@@ -89,7 +89,7 @@ function sac_bk_home_block_default_fe_block_settings() {
         'region' => 'contact',
         'status' => 1,
         'theme' => 'sackreuter',
-        'weight' => 0,
+        'weight' => -13,
       ),
       'seven' => array(
         'region' => '',
@@ -134,7 +134,7 @@ function sac_bk_home_block_default_fe_block_settings() {
         'region' => 'contact',
         'status' => 1,
         'theme' => 'sackreuter',
-        'weight' => 0,
+        'weight' => -14,
       ),
       'seven' => array(
         'region' => '',
@@ -235,6 +235,51 @@ function sac_bk_home_block_default_fe_block_settings() {
     ),
     'title' => 'Nos Véhicules',
     'visibility' => 1,
+  );
+
+  $export['block-certications'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'machine_name' => 'certications',
+    'module' => 'block',
+    'node_types' => array(),
+    'options' => 'a:0:{}',
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'sackreuter' => array(
+        'region' => 'bottom_content',
+        'status' => 1,
+        'theme' => 'sackreuter',
+        'weight' => -13,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Nos Certifications',
+    'visibility' => 0,
   );
 
   $export['sac_rv-rendez_vous'] = array(

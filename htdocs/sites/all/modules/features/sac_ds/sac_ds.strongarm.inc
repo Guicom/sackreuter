@@ -26,7 +26,6 @@ function sac_ds_strongarm() {
   $strongarm->name = 'ds_extras_view_modes_offre';
   $strongarm->value = array(
     0 => 'default',
-    1 => 'teaser',
   );
   $export['ds_extras_view_modes_offre'] = $strongarm;
 
