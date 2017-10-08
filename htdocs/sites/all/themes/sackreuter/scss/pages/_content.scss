@@ -3,7 +3,8 @@
 .node-type-blog,
 .page-blog,
 .page-contact,
-.page-node-add-contact {
+.page-node-add-contact,
+.page-actualites {
   .page-header {
     @include make-container;
   }
@@ -17,7 +18,8 @@
     }
   }
 
-  .view-blog:not(.view-display-id-block) {
+  .view-blog:not(.view-display-id-block),
+  .view-offre-home {
     @include make-container;
     #views-bootstrap-grid-1 {
       .row {
@@ -38,7 +40,7 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .field-name-body {
@@ -49,5 +51,32 @@ body {
     margin-bottom: 30px;
     margin-left: -15px;
     margin-right: -15px;
+  }
+}
+
+.ancre-wrapper {
+  display: flex;
+
+  .ancre {
+    background: $red;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    margin-right: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    a {
+      color: $white;
+    }
+
+    &:hover {
+      background: darken($red, 10%);
+    }
+  }
+}
+
+h2 {
+  a {
+    color: $grey-darker;
   }
 }

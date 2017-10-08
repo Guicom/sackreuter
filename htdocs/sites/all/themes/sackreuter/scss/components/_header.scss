@@ -31,6 +31,16 @@ header.navbar-default {
             font-weight: 300;
             border-bottom: 2px solid $white;
             @include transition-s;
+            padding: 10px 15px;
+            @include custom-breakpoint(1300px) {
+              padding: 10px 5px;
+            }
+            @include custom-breakpoint(960px) {
+              font-size: 20px;
+            }
+            @include custom-breakpoint(850px) {
+              font-size: 18px;
+            }
             &:hover {
               background: none;
               border-bottom: 2px solid $red;

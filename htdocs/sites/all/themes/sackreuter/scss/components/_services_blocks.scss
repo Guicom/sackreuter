@@ -4,6 +4,18 @@
 
   .view-header-left {
     width: 60%;
+    position: relative;
+    &:after {
+      content: '';
+      background: url("../images/mir_rede_elsassisch_2016.jpg");
+      display: block;
+      height: 57px;
+      width: 150px;
+      position: absolute;
+      background-size: contain;
+      right: 15px;
+      bottom: -85px;
+    }
 
     .view-header-left-wrapper {
       width: 80%;

@@ -24,6 +24,13 @@ function sac_ct_offre_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 2,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
       'services_home' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -57,7 +64,7 @@ function sac_ct_offre_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 2,
     ),
   );
 
@@ -77,11 +84,21 @@ function sac_ct_offre_field_default_field_instances() {
         'type' => 'image',
         'weight' => 1,
       ),
+      'listing' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'vignette_home',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'services_home' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -139,7 +156,50 @@ function sac_ct_offre_field_default_field_instances() {
         ),
       ),
       'type' => 'simplecrop_widget',
-      'weight' => 32,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-offre-field_type'.
+  $field_instances['node-offre-field_type'] = array(
+    'bundle' => 'offre',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
+      'services_home' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_type',
+    'label' => 'Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
     ),
   );
 
@@ -147,6 +207,7 @@ function sac_ct_offre_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Image Accueil');
+  t('Type');
 
   return $field_instances;
 }

@@ -147,12 +147,11 @@
         <?php print render($page['rendez_vous']); ?>
       <?php endif; ?>
       <?php if (!empty($page['blog'])): ?>
-        <?php print render($page['blog']); ?>
+        <?php //print render($page['blog']); ?>
       <?php endif; ?>
       <?php if (!empty($page['contact'])): ?>
         <?php print render($page['contact']); ?>
       <?php endif; ?>
-      <?php print render($page['content']); ?>
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>

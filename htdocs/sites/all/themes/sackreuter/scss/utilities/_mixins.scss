@@ -11,3 +11,9 @@
   margin: 0 auto;
   padding: 15px;
 }
+
+@mixin custom-breakpoint($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content
+  }
+}

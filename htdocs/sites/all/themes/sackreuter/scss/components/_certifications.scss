@@ -1,0 +1,26 @@
+.region-bottom-content {
+  border-top: solid 1px $red;
+
+  #block-block-7 {
+    @include make-container;
+
+    .block-title {
+      margin-top: 0px;
+    }
+    .certif-wrapper {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .certif {
+        img {
+          max-width: 150px;
+          height: auto;
+        }
+        p {
+
+        }
+      }
+    }
+  }
+}
