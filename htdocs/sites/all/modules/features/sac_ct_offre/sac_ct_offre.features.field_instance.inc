@@ -29,7 +29,7 @@ function sac_ct_offre_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'services_home' => array(
         'label' => 'hidden',
@@ -92,7 +92,7 @@ function sac_ct_offre_field_default_field_instances() {
           'image_style' => 'vignette_home',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'services_home' => array(
         'label' => 'hidden',
@@ -174,10 +174,11 @@ function sac_ct_offre_field_default_field_instances() {
         'weight' => 3,
       ),
       'listing' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 0,
       ),
       'services_home' => array(
         'label' => 'above',
