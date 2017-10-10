@@ -11,7 +11,7 @@
 
   .ds-2col-fluid,
   .ds-1col {
-    &.node-offre,
+    &.node-offre:not(.view-mode-listing),
     &.node-page,
     &.node-blog:not(.view-mode-listing){
       @include make-container;
