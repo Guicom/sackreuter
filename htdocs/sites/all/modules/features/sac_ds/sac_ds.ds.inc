@@ -64,12 +64,12 @@ function sac_ds_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'listing';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'node_link' => array(
-      'weight' => '3',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -283,13 +283,15 @@ function sac_ds_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_offre_image_accueil',
-        1 => 'title',
-        2 => 'body',
-        3 => 'node_link',
+        0 => 'field_type',
+        1 => 'field_offre_image_accueil',
+        2 => 'title',
+        3 => 'body',
+        4 => 'node_link',
       ),
     ),
     'fields' => array(
+      'field_type' => 'ds_content',
       'field_offre_image_accueil' => 'ds_content',
       'title' => 'ds_content',
       'body' => 'ds_content',

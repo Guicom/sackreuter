@@ -188,7 +188,7 @@ function sac_bk_home_block_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Une équipe d\'expert qui travail avec passion',
+    'title' => 'Une équipe d\'experts qui travaille avec passion',
     'visibility' => 1,
   );
 

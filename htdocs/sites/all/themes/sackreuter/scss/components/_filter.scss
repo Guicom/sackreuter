@@ -1,0 +1,18 @@
+.views-exposed-form {
+  padding: 0 15px;
+  #edit-field-type-tid-wrapper {
+    display: flex;
+
+    label {
+      margin-right: 15px;
+    }
+    .views-widget {
+      width: 150px;
+    }
+  }
+  .views-exposed-widget {
+    .btn {
+      margin-top: 0;
+    }
+  }
+}

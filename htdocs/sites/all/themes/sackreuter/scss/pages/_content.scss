@@ -19,7 +19,7 @@
   }
 
   .view-blog:not(.view-display-id-block),
-  .view-offre-home {
+  .view-offre-home:not(.view-display-id-block) {
     @include make-container;
     #views-bootstrap-grid-1 {
       .row {
