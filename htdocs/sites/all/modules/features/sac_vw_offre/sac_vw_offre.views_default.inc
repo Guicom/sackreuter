@@ -125,6 +125,45 @@ function sac_vw_offre_views_default_views() {
   $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'tags';
   $handler->display->display_options['path'] = 'actualites';
+
+  /* Display: Page 2 */
+  $handler = $view->new_display('page', 'Page 2', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Nos promotions';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'views_bootstrap_grid_plugin_style';
+  $handler->display->display_options['style_options']['columns'] = '2';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'listing';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Contenu: Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Contenu: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'offre' => 'offre',
+  );
+  /* Filter criterion: Contenu: Type (field_type) */
+  $handler->display->display_options['filters']['field_type_tid']['id'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['table'] = 'field_data_field_type';
+  $handler->display->display_options['filters']['field_type_tid']['field'] = 'field_type_tid';
+  $handler->display->display_options['filters']['field_type_tid']['value'] = array(
+    3 => '3',
+  );
+  $handler->display->display_options['filters']['field_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_type_tid']['vocabulary'] = 'tags';
+  $handler->display->display_options['path'] = 'promotions';
   $translatables['offre_home'] = array(
     t('Master'),
     t('Nos actualités'),
@@ -145,6 +184,8 @@ function sac_vw_offre_views_default_views() {
     t('suivant ›'),
     t('dernier »'),
     t('Type'),
+    t('Page 2'),
+    t('Nos promotions'),
   );
   $export['offre_home'] = $view;
 

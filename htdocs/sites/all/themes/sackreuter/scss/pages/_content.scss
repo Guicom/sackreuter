@@ -4,7 +4,8 @@
 .page-blog,
 .page-contact,
 .page-node-add-contact,
-.page-actualites {
+.page-actualites,
+.page-promotions {
   .page-header {
     @include make-container;
   }
