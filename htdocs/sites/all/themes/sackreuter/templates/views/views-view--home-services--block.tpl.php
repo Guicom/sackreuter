@@ -35,6 +35,7 @@
     <div class="view-header-left-wrapper">
       <h2 class="title-underline-right big"><?php print t('Un savoir faire à votre service'); ?></h2>
       <?php print $header; ?>
+      <img class="mir-rede" src="/sites/all/themes/sackreuter/images/mir_rede_elsassisch_2016.jpg">
     </div>
   </div>
 <?php endif; ?>

@@ -3,6 +3,10 @@
   background: $grey-dark;
   @include row-eq-height;
   align-items: center;
+  flex-flow: wrap;
+  @include custom-breakpoint(1200px) {
+    justify-content: space-between;
+  }
 
   #ventes,
   #blog-texte {
@@ -12,6 +16,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include custom-breakpoint(630px) {
+      width: 100%;
+    }
 
     .block-content-wrapper {
       flex-grow: 2;
@@ -35,10 +42,19 @@
     }
 
     .diago-wrapper {
-      height: auto;
+      height: 100%;
       width: 35%;
       background: $grey-dark;
       overflow: hidden;
+      @include custom-breakpoint(1680px) {
+        width: 54%;
+      }
+      @include custom-breakpoint(1200px) {
+        width: 54%;
+      }
+      @include custom-breakpoint(630px) {
+        display: none;
+      }
       .diago {
         background: $grey-darker;
         transform: rotate(-60deg);
@@ -47,6 +63,14 @@
         position: relative;
         left: -255px;
         top: -37px;
+        @include custom-breakpoint(1200px) {
+          transform: rotate(-77deg);
+          width: 700px;
+          height: 300px;
+          position: relative;
+          left: -347px;
+          top: 70px;
+        }
       }
     }
   }
@@ -55,10 +79,30 @@
   #blog {
     width: 60%;
 
+    @include custom-breakpoint(1200px) {
+      width: 50%;
+    }
+
+    @include custom-breakpoint(900px) {
+      width: 60%;
+    }
+
+    @include custom-breakpoint(630px) {
+      width: 100%;
+    }
+
+
     .view-content {
       @include row-eq-height-center;
+      flex-flow: wrap;
       @include custom-breakpoint(1200px) {
         flex-direction: column;
+      }
+
+      .views-row {
+        @include custom-breakpoint(360px) {
+          width: 100%;
+        }
       }
 
       .home-services-bg {
@@ -70,6 +114,14 @@
         flex-direction: column;
         padding: 5px;
         position: relative;
+
+        @include custom-breakpoint(1200px) {
+          margin: 15px 0;
+        }
+        @include custom-breakpoint(360px) {
+          width: 100%;
+          height: auto;
+        }
 
         &:before {
           content: '';
@@ -131,6 +183,7 @@
       text-align: right;
       margin-right: 30px;
       margin-top: 10px;
+      margin-bottom: 15px;
       a {
         background: $red;
         color: $white;
