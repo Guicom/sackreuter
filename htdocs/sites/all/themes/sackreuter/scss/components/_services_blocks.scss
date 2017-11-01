@@ -5,16 +5,11 @@
   .view-header-left {
     width: 60%;
     position: relative;
-    &:after {
-      content: '';
-      background: url("../images/mir_rede_elsassisch_2016.jpg");
-      display: block;
-      height: 57px;
-      width: 150px;
-      position: absolute;
-      background-size: contain;
-      right: 15px;
-      bottom: -85px;
+
+    .mir-rede {
+      width: 120px;
+      float: right;
+      margin-bottom: 15px;
     }
 
     .view-header-left-wrapper {
@@ -32,10 +27,16 @@
         font-weight: 300;
       }
     }
+    @include custom-breakpoint(768px) {
+      width: 100%;
+    }
   }
 
   .view-content-right {
     width: 40%;
+    @include custom-breakpoint(768px) {
+      width: 100%;
+    }
 
     .home-services-bg {
       background-repeat: no-repeat;
@@ -49,6 +50,10 @@
         font-weight: 300;
         line-height: 175px;
         padding-left: 50px;
+        @include custom-breakpoint(990px) {
+          padding-left: 0;
+          text-align: center;
+        }
         a {
           color: $white;
         }

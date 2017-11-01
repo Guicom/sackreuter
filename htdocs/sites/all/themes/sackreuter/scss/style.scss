@@ -2,13 +2,15 @@
 @import 'utilities/_variables';
 
 // Bootstrap Framework.
+@import 'override_bootstrap';
 @import '../bootstrap/assets/stylesheets/bootstrap';
+
 
 // Base-theme overrides.
 @import 'utilities/_overrides';
 
-@import "utilities/classes";
 @import "utilities/mixins";
+@import "utilities/classes";
 @import "components/header";
 @import "components/services_blocks";
 @import "components/offre_block";

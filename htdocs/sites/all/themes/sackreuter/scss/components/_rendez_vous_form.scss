@@ -31,6 +31,9 @@
   .group-date {
     width: 48%;
     float: left;
+    @include custom-breakpoint(600px) {
+      width: 100%;
+    }
 
     #rv-date {
       .datepicker {
@@ -109,6 +112,10 @@
     width: 48%;
     float: right;
 
+    @include custom-breakpoint(600px) {
+      width: 100%;
+    }
+
     .form-group {
       width: 48%;
       &:nth-child(odd) {
@@ -126,6 +133,10 @@
   .group-rendez-vous {
     width: 48%;
     float: right;
+
+    @include custom-breakpoint(600px) {
+      width: 100%;
+    }
   }
 
   fieldset {

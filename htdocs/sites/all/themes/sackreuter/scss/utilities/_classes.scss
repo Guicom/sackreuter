@@ -1,5 +1,6 @@
 .row-eq-height {
   display: flex;
+  flex-wrap: wrap;
   &.center {
     align-items: center;
     justify-content: space-between;
@@ -29,7 +30,7 @@
 }
 
 .big {
-  font-size: 80px;
+  @include big-title;
   font-weight: 200;
 }
 

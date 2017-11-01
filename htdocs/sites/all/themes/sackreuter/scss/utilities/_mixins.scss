@@ -17,3 +17,10 @@
     @content
   }
 }
+
+@mixin big-title {
+  font-size: 80px;
+  @include custom-breakpoint(600px) {
+    font-size: 60px;
+  }
+}

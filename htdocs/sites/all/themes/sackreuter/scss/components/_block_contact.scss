@@ -3,6 +3,9 @@
   height: auto;
   overflow: hidden;
   display: flex;
+  @include custom-breakpoint(650px) {
+    flex-flow: wrap;
+  }
 
   #block-block-4 {
     //width: 1002px;
@@ -12,6 +15,9 @@
 
     iframe {
       max-width: 100%;
+    }
+    @include custom-breakpoint(650px) {
+      width: 100%;
     }
   }
 
@@ -31,12 +37,6 @@
         font-weight: 200;
       }
 
-      @include custom-breakpoint(1500px) {
-        .col-md-6 {
-          //width: 100%;
-        }
-      }
-
       p {
         font-size: 18px;
       }
@@ -49,6 +49,20 @@
           color: $red;
         }
       }
+
+      @include custom-breakpoint(1120px) {
+        padding: 15px;
+      }
+      @include custom-breakpoint(650px) {
+        width: 100%;
+      }
+    }
+
+    @include custom-breakpoint(890px) {
+      padding: 0;
+    }
+    @include custom-breakpoint(650px) {
+      width: 100%;
     }
   }
 }
