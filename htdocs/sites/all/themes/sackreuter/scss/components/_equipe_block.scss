@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: flex-end;
     padding-right: 70px;
+    padding-bottom: 30px;
     @include custom-breakpoint(420px) {
       width: 100%;
       padding-right: 0;
